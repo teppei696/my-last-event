@@ -82,9 +82,8 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div>access_token : <?php echo "/tmp/access_token_iv_$key" ?></div>
-<div>$base_64_token : <?php echo $base64_token ?></div>
-<div>$iv : <?php echo $iv ?></div>
+<div>$access_token : <?php echo $access_token ?></div>
+<div>$refresh_token : <?php echo $refresh_token ?></div>
 <div class="wrap">
 <!-- 「Step.2 ユーザー設定画面のURL取得処理」を呼び出す -->
 <form action="geturl.php" method="POST">
