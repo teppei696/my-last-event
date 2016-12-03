@@ -1,11 +1,12 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/yahoojapan/yconnect-php-sdk"
-        }
-    ],
-    "require": {
-        "yahoojapan/yconnect-php-sdk": "dev-master"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/yahoojapan/yconnect-php-sdk"
     }
+  ],
+  "require": {
+    "yahoojapan/yconnect-php-sdk": "dev-master",
+    "ext-mbstring": "*"
+  }
 }
