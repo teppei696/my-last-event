@@ -9,7 +9,7 @@
 	// コールバックURL
 	$redirect_uri  = "https://my-last-event.herokuapp.com/callback.php";
 
-	$state="2e768b5fff52d35ab274cb6e6721c00c";
+	$state="2e768b5fff52d35a";
 	$nonce="c74f3504cb222d851b8ed05e61a890fc";
 
 	$cred = new ClientCredential( $client_id, $client_secret );
@@ -103,10 +103,10 @@
 <body>
 <div>$access_token : <?php echo $access_token ?></div>
 <pre>
-$size : <?php echo $size ?>
-$iv : <?php echo $iv ?>
-$enc_token : <?php echo $enc_token ?>
-$base64_token : <?php echo $base64_token ?>
+$size : <?php echo $size ?><br>
+$iv : <?php echo $iv ?><br>
+$enc_token : <?php echo $enc_token ?><br>
+$base64_token : <?php echo $base64_token ?><br>
 </pre>
 <div class="wrap">
 <!-- 「Step.2 ユーザー設定画面のURL取得処理」を呼び出す -->

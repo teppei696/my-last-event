@@ -139,7 +139,7 @@
 	function decrypt_token($user_id, $kind)
 	{
 		// アクセストークンの復号化
-		$iv = exec("cat ./".$kind."_iv_".$user_id);
+		$iv = exec("cat /tmp/".$kind."_iv_".$user_id);
 		$base64_token = exec("cat /tmp/".$kind."_".$user_id);
 		$enc_token = base64_decode( $base64_token );
 		$dec_token = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $user_id, $enc_token, MCRYPT_MODE_CBC, $iv);
