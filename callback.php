@@ -57,21 +57,21 @@
 		// アクセストークンの暗号化
 		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
 		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/access_token_iv_$key");
+		exec("echo $iv > ./access_token_iv_$key");
 		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $access_token, MCRYPT_MODE_CBC, $iv);
 		$base64_token = base64_encode( $enc_token );
 		// 暗号化したアクセストークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/access_token_$key");
+		exec("echo $base64_token > ./access_token_$key");
 
 
 		// リフレッシュトークンの暗号化
 		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
 		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/refresh_token_iv_$key");
+		exec("echo $iv > ./refresh_token_iv_$key");
 		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $refresh_token, MCRYPT_MODE_CBC, $iv)	;
 		$base64_token = base64_encode( $enc_token );
 		// 暗号化したリフレッシュトークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/refresh_token_$key");
+		exec("echo $base64_token > ./refresh_token_$key");
 	}
 
 	// TODO : ここから上はリリースまでにトークンの保存方法の修正が必要です。↑↑↑↑↑
