@@ -19,7 +19,7 @@ window.yconnectInit = function() {
 		},
 		authorization: {
 			clientId: "dj0zaiZpPURVTVRhTThhaUpaSiZzPWNvbnN1bWVyc2VjcmV0Jng9NmI-",
-			redirectUri: "https://mythings-developers.yahoo.co.jp/sample/confirm",
+			redirectUri: "https://my-last-event.herokuapp.com/callback.php",
 			scope: "",
 			state: "2e768b5fff52d35ab274cb6e6721c00c",
 			nonce: "c74f3504cb222d851b8ed05e61a890fc",

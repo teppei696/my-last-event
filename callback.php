@@ -7,7 +7,7 @@
 	$client_id = "dj0zaiZpPURVTVRhTThhaUpaSiZzPWNvbnN1bWVyc2VjcmV0Jng9NmI-";
 	$client_secret = "3888f419905d859111f2640028cdcd84e269d530";
 	// コールバックURL
-	$redirect_uri  = "https://mythings-developers.yahoo.co.jp/sample/confirm";
+	$redirect_uri  = "https://my-last-event.herokuapp.com/callback.php";
 
 	$state="2e768b5fff52d35ab274cb6e6721c00c";
 	$nonce="c74f3504cb222d851b8ed05e61a890fc";
