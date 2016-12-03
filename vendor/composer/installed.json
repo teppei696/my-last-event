@@ -1,0 +1,50 @@
+[
+    {
+        "name": "yahoojapan/yconnect-php-sdk",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yahoojapan/yconnect-php-sdk.git",
+            "reference": "251ade9e2ee0d61ba539e13d85f3a9ab5911e25c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yahoojapan/yconnect-php-sdk/zipball/251ade9e2ee0d61ba539e13d85f3a9ab5911e25c",
+            "reference": "251ade9e2ee0d61ba539e13d85f3a9ab5911e25c",
+            "shasum": ""
+        },
+        "time": "2016-01-29 06:06:01",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "YConnect": "lib/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Yahoo Japan Corporation",
+                "email": "none"
+            }
+        ],
+        "description": "YConnect PHP SDK",
+        "homepage": "https://github.com/yahoojapan/yconnect-php-sdk",
+        "keywords": [
+            "BillingAddress",
+            "FastPay",
+            "OpenID Connect",
+            "PHP",
+            "UserInfo",
+            "YConnect",
+            "Yahoo! JAPAN"
+        ],
+        "support": {
+            "source": "https://github.com/yahoojapan/yconnect-php-sdk/tree/2.2.1",
+            "issues": "https://github.com/yahoojapan/yconnect-php-sdk/issues"
+        }
+    }
+]

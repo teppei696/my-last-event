@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "ea0a6d3927955364b0a937b22d86500f",
+    "content-hash": "3b84fec45936c145451a4c78e8abcb79",
+    "packages": [
+        {
+            "name": "yahoojapan/yconnect-php-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yahoojapan/yconnect-php-sdk.git",
+                "reference": "251ade9e2ee0d61ba539e13d85f3a9ab5911e25c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yahoojapan/yconnect-php-sdk/zipball/251ade9e2ee0d61ba539e13d85f3a9ab5911e25c",
+                "reference": "251ade9e2ee0d61ba539e13d85f3a9ab5911e25c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "YConnect": "lib/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yahoo Japan Corporation",
+                    "email": "none"
+                }
+            ],
+            "description": "YConnect PHP SDK",
+            "homepage": "https://github.com/yahoojapan/yconnect-php-sdk",
+            "keywords": [
+                "BillingAddress",
+                "FastPay",
+                "OpenID Connect",
+                "PHP",
+                "UserInfo",
+                "YConnect",
+                "Yahoo! JAPAN"
+            ],
+            "support": {
+                "source": "https://github.com/yahoojapan/yconnect-php-sdk/tree/2.2.1",
+                "issues": "https://github.com/yahoojapan/yconnect-php-sdk/issues"
+            },
+            "time": "2016-01-29 06:06:01"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "yahoojapan/yconnect-php-sdk": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
