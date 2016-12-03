@@ -138,8 +138,7 @@
 	 */
 	function decrypt_token($user_id, $kind)
 	{
-		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
-		$key = substr($user_id, 0, $size);
+		$key = substr($user_id, 0, 16);
 		// アクセストークンの復号化
 		$iv = exec("cat /tmp/".$kind."_iv_".$user_id);
 		$base64_token = exec("cat /tmp/".$kind."_".$user_id);
