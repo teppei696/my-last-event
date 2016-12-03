@@ -9,7 +9,7 @@
 	// コールバックURL
 	$redirect_uri  = "https://my-last-event.herokuapp.com/callback.php";
 
-	$state="2e768b5fff52d35a";
+	$state="2e768b5fff52d35ab274cb6e6721c00c";
 	$nonce="c74f3504cb222d851b8ed05e61a890fc";
 
 	$cred = new ClientCredential( $client_id, $client_secret );
@@ -30,25 +30,7 @@
 
 		// TODO : ここから下はリリースまでにトークンの保存方法の修正が必要です。↓↓↓↓↓↓
 		// アクセストークン、リフレッシュトークンの保存
-		//save_token($access_token, $refresh_token, $id_token->user_id, $state);
-    // アクセストークンの暗号化
-		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
-		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/access_token_iv_$tmp_key");
-		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $tmp_key, $access_token, MCRYPT_MODE_CBC, $iv);
-		$base64_token = base64_encode( $enc_token );
-		// 暗号化したアクセストークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/access_token_$tmp_key");
-
-
-		// リフレッシュトークンの暗号化
-		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
-		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/refresh_token_iv_$tmp_key");
-		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $tmp_key, $refresh_token, MCRYPT_MODE_CBC, $iv)	;
-		$base64_token = base64_encode( $enc_token );
-		// 暗号化したリフレッシュトークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/refresh_token_$tmp_key");
+		save_token($access_token, $refresh_token, $id_token->user_id, $state);
 		// TODO : ここから上はリリースまでにトークンの保存方法の修正が必要です。↑↑↑↑↑
 
 	} catch ( TokenException $e ) {
@@ -106,7 +88,7 @@
 $size : <?php echo $size ?><br>
 $iv : <?php echo $iv ?><br>
 $enc_token : <?php echo $enc_token ?><br>
-$base64_token : <?php echo $base64_token ?><br>
+$base64_token : <?php echo $base64_token ?><br<
 </pre>
 <div class="wrap">
 <!-- 「Step.2 ユーザー設定画面のURL取得処理」を呼び出す -->
