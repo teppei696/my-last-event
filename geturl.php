@@ -138,11 +138,13 @@
 	 */
 	function decrypt_token($user_id, $kind)
 	{
+		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+		$key = substr($user_id, 0, $size);
 		// アクセストークンの復号化
 		$iv = exec("cat /tmp/".$kind."_iv_".$user_id);
 		$base64_token = exec("cat /tmp/".$kind."_".$user_id);
 		$enc_token = base64_decode( $base64_token );
-		$dec_token = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $user_id, $enc_token, MCRYPT_MODE_CBC, $iv);
+		$dec_token = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $enc_token, MCRYPT_MODE_CBC, $iv);
 		$token = rtrim($dec_token);
 
 		return $token;
