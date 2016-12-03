@@ -25,6 +25,7 @@
 		// IDトークンを検証
 		$verify_result = $client->verifyIdToken( $nonce );
 		$id_token = $client->getIdToken();
+    $tmp_key = $id_token->user_id;
 
 
 		// TODO : ここから下はリリースまでにトークンの保存方法の修正が必要です。↓↓↓↓↓↓
@@ -33,21 +34,21 @@
     // アクセストークンの暗号化
 		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
 		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/access_token_iv_$id_token->user_id");
-		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $id_token->user_id, $access_token, MCRYPT_MODE_CBC, $iv);
+		exec("echo $iv > /tmp/access_token_iv_$tmp_key");
+		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $tmp_key, $access_token, MCRYPT_MODE_CBC, $iv);
 		$base64_token = base64_encode( $enc_token );
 		// 暗号化したアクセストークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/access_token_$id_token->user_id,");
+		exec("echo $base64_token > /tmp/access_token_$tmp_key");
 
 
 		// リフレッシュトークンの暗号化
 		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
 		$iv = substr($state, 0, $size);
-		exec("echo $iv > /tmp/refresh_token_iv_$id_token->user_id,");
-		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $id_token->user_id,, $refresh_token, MCRYPT_MODE_CBC, $iv)	;
+		exec("echo $iv > /tmp/refresh_token_iv_$tmp_key");
+		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $tmp_key, $refresh_token, MCRYPT_MODE_CBC, $iv)	;
 		$base64_token = base64_encode( $enc_token );
 		// 暗号化したリフレッシュトークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
-		exec("echo $base64_token > /tmp/refresh_token_$id_token->user_id,");
+		exec("echo $base64_token > /tmp/refresh_token_$tmp_key");
 		// TODO : ここから上はリリースまでにトークンの保存方法の修正が必要です。↑↑↑↑↑
 
 	} catch ( TokenException $e ) {
