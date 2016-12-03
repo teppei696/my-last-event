@@ -36,8 +36,8 @@
 		// アクセストークン、リフレッシュトークンの保存
 		//save_token($access_token, $refresh_token, $id_token->user_id, $state);
     // アクセストークンの暗号化
-    $key = substr($id_token->user_id, 0, $size);
 		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+    $key = substr($id_token->user_id, 0, $size);
 		$iv = substr($state, 0, $size);
 		exec("echo $iv > /tmp/access_token_iv_$key");
 		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $access_token, MCRYPT_MODE_CBC, $iv);
@@ -108,6 +108,7 @@
 <body>
 <div>$access_token : <?php echo $access_token ?></div>
 <pre>
+$key : <?php echo $key ?><br>
 $size : <?php echo $size ?><br>
 $iv : <?php echo $iv ?><br>
 $enc_token : <?php echo $enc_token ?><br>
