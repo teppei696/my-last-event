@@ -3,8 +3,11 @@
 	use YConnect\Credential\ClientCredential;
 	use YConnect\YConnectClient;
 
-  var $size,$iv,$enc_token,$base64_token;
-  
+  $size = "1";
+  $iv = "2";
+  $enc_token = "3";
+  $base64_token = "4";
+
 	// アプリケーションID, シークレット
 	$client_id = "dj0zaiZpPURVTVRhTThhaUpaSiZzPWNvbnN1bWVyc2VjcmV0Jng9NmI-";
 	$client_secret = "3888f419905d859111f2640028cdcd84e269d530";
