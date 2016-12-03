@@ -102,9 +102,12 @@
 </head>
 <body>
 <div>$access_token : <?php echo $access_token ?></div>
-<div>$refresh_token : <?php echo $refresh_token ?></div>
-<div>access_token_iv : <?php echo "/tmp/access_token_iv_$tmp_key" ?></div>
-<div>$base64_token : <?php echo $base64_token ?></div>
+<pre>
+$size : <?php echo $size ?>
+$iv : <?php echo $iv ?>
+$enc_token : <?php echo $enc_token ?>
+$base64_token : <?php echo $base64_token ?>
+</pre>
 <div class="wrap">
 <!-- 「Step.2 ユーザー設定画面のURL取得処理」を呼び出す -->
 <form action="geturl.php" method="POST">
