@@ -3,7 +3,7 @@
 	$auth_url = "https://auth.login.yahoo.co.jp/yconnect/v1/token";
 
 	// カスタムトリガー実行APIエンドポイント
-	$url = "https://mythings-developers.yahooapis.jp/v2/services/2e768b5fff52d35ab274cb6e6721c00c/mythings/53317db53ec72618ddf8cc8b9ccb2652/run";
+	$url = "https://mythings-developers.yahooapis.jp/v2/services/2e768b5fff52d35ab274cb6e6721c00c/mythings/c74f3504cb222d851b8ed05e61a890fc/run";
 
 	// アプリケーションID
 	$appid = "dj0zaiZpPURVTVRhTThhaUpaSiZzPWNvbnN1bWVyc2VjcmV0Jng9NmI-";
@@ -11,13 +11,13 @@
 	$secret = "3888f419905d859111f2640028cdcd84e269d530";
 
 	// アクセストークン
-	$access_token = "FJaLbDAB5aKSq1DdBG5wrQkttuBrqJqJWgdbUQ8eek9I7kLdczFuX3hy29iUfPdkofjca6zQvn2LKsSesUKE_XYHyD2ZwxCG9qo.7NcedNeVPYEA04_v6UBrnhMCS8fzWnk5zJOJYYML5ph_rvKmvxj2FCMVbHvNNXM_gIxUvpv3puP7Uh8A4BVtkPXVPTla0EDhBo1i6Ziwo53Vdx0FymAYXukuvj1EtHKgBjp9fNJguZwtnfZhSdQXOHHRsXbQsBVUGz8A_RygPBgYxEbb2sTwcYd3GO0C9W5Sk1KdB4x_eMt20fRU4TFX6JOp3vjWTKp_Ibmq1QOrqEogAv0fA69zJQwBdCx6wKay5bq_QZe4uERuaBh6l2riI5z4BJokmWXz9oGE6Z.HLNx9lfNyiGeH6HoFSZbcyO1irxMaDAlfxS3IrZhAU79zdvPabMZZr1rvK5JG8mLqgO5dGShtKTGm9X2d.3rptpKmXT24AXCOD7IYFhhe4vS829ek0h_4mNEJbH3qCUiw_ObFNf4_uNNW4Qz7FoluquukB1.okjvmJlxmZU0EdvGZZFt1bO9ij3yCR.qygFe1k.noxg6S6V797dAIy3Xb4PncSXyZjd86mhPouyvrN3iFEQI1.LkSLtGldXDwZc39";
+	$access_token = "USSDRekh5plozAbclLalWWOGGa0H3.2ALqtKx6LDfA0.3NX1V_f4JpWkR6UwiJAcjGKB060Gdr6MovyjpfD5zjMReWafNGXzcyzWUgxhaVGj3LJJElEnbs5bSM8G_AuLbqH.tSqAlkBchmDi4E9iaKsc8lminyZGVw8qq1IRtk9EHm29reyIa6Sr4Nm_SgEjd.AVLx0CPMHGUCM705MBX4Ufc1R_c.SP_QAnakpnuQu6XTay3C8JoXf_ssphOat1OLIwNLHY07ua7v7xJq.qT1XttvJ1Irs4R0Ty_fIAJaV_5QYVCP_oVnGZPVBhTItxGQAaTSvJ_Mi2.lENXyslNnAkl5rRDcxl9p3miPNKPQoqxX58ox4EybjpQHX3RdF1LRPUmp7T2Wz9FqHPlddfXBglpy4Ku8I3EEJat6lHReL7LLTMOro1ddNNWboKQbFtOLETA_d8qy9oKpP9SwRTblZCdCRNaXsyWXhPI1VCrMKE4qcgkAhVS_a7WfZgg4l7PqY8XbfhNCVcaL2xvwFWEHemmApJr1V30VCKHJ5UaDHobgi5An4J2kOt4N8QAYhDhznM4yVYwh36I9iMYeosxwl2QL8G14ztLPyR4smvvPsssRCxswlTECJZvzGWcpSop2t..qF71Prc";
 	// リフレッシュトークン
 	$refresh_token = "AJzlL1g5Cv7PvUN2VwDCdkUb.44xweqkJYCPy5aW_1NnE_IWFY5Njos-";
 
 	// カスタムトリガーに設定したキー名と値を指定
 	$post = array();
-	$post_args = array("message" => "message");
+	$post_args = array("msg" => "msg");
 	$post["entry"] = json_encode($post_args);
 
 	// カスタムトリガーの実行
