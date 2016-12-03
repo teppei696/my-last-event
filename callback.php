@@ -29,7 +29,25 @@
 
 		// TODO : ここから下はリリースまでにトークンの保存方法の修正が必要です。↓↓↓↓↓↓
 		// アクセストークン、リフレッシュトークンの保存
-		save_token($access_token, $refresh_token, $id_token->user_id, $state);
+		//save_token($access_token, $refresh_token, $id_token->user_id, $state);
+    // アクセストークンの暗号化
+		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+		$iv = substr($state, 0, $size);
+		exec("echo $iv > /tmp/access_token_iv_$key");
+		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $access_token, MCRYPT_MODE_CBC, $iv);
+		$base64_token = base64_encode( $enc_token );
+		// 暗号化したアクセストークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
+		exec("echo $base64_token > /tmp/access_token_$key");
+
+
+		// リフレッシュトークンの暗号化
+		$size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+		$iv = substr($state, 0, $size);
+		exec("echo $iv > /tmp/refresh_token_iv_$key");
+		$enc_token = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $refresh_token, MCRYPT_MODE_CBC, $iv)	;
+		$base64_token = base64_encode( $enc_token );
+		// 暗号化したリフレッシュトークンをファイルに保存（本来は外部からアクセスできない環境で保管してください）
+		exec("echo $base64_token > /tmp/refresh_token_$key");
 		// TODO : ここから上はリリースまでにトークンの保存方法の修正が必要です。↑↑↑↑↑
 
 	} catch ( TokenException $e ) {
@@ -84,7 +102,8 @@
 <body>
 <div>$access_token : <?php echo $access_token ?></div>
 <div>$refresh_token : <?php echo $refresh_token ?></div>
-<div>ls command : <?php exec("ls -lat /tmp"); ?>
+<div>access_token_iv : <?php echo "/tmp/access_token_iv_$key" ?></div>
+<div>$base64_token : <?php echo $base64_token ?></div>
 <div class="wrap">
 <!-- 「Step.2 ユーザー設定画面のURL取得処理」を呼び出す -->
 <form action="geturl.php" method="POST">
