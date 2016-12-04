@@ -12,6 +12,7 @@
 ?>
 <div class="wrap">
 <form action="customtrigger.php" method="POST">
+<textarea id="msg" name="msg" rows="4" cols="40"></textarea><br>
 <input type="hidden" name="user_id" value="<?php echo $_GET["user_id"] ?>">
 <input type="submit" value="カスタムトリガー実行">
 </form>
