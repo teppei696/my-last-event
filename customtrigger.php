@@ -18,7 +18,9 @@
 
 	// カスタムトリガーに設定したキー名と値を指定
 	$post = array();
-	$post_args = array("msg" => "msg");
+  //$msg = $_POST["msg"];
+  $msg = "一旦は埋め込みでテストを実施します。"
+	$post_args = array("msg" => $msg);
 	$post["entry"] = json_encode($post_args);
 
 	// アクセスしたユーザーのアクセストークン取得
