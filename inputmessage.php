@@ -96,11 +96,11 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="告別式の日程" id="kokubetsu" data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="告別式の日程" id="kokubetsu">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="お葬式の日程" id="sousiki" data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="お葬式の日程" id="sousiki">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
