@@ -23,7 +23,7 @@
 	$post["entry"] = json_encode($post_args);
 
 	// アクセスしたユーザーのアクセストークン取得
-	$user_id = $_POST["user_id"];
+	$user_id = "JLLTD6DA5EWZGJAIZ6FLKVRUWE";
 	$access_token = decrypt_token($user_id, 'access_token');
 
 	// カスタムトリガーの実行
