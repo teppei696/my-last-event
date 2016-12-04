@@ -80,13 +80,7 @@
 		echo "・URLが間違っている可能性があります。サンプルコードの".'$url'."とmyThings Developersに表示されているAPIエントリーポイントが一致している事を確認してください<br>";
 		echo "・アクセストークンが正しく取得出来ていない可能性があります。アクセストークンの保存(callback.php)、および、取得を確認してください。<br>";
 	} else {
-		echo "以下の作業を行いました。<br>";
-    echo "　・鈴木鉄兵様のTwitterへの投稿<br>";
-    echo "　・鈴木鉄兵様のFacebookへの投稿<br>";
-    echo "　・鈴木家用タスクリスト（Todoist）へのタスク追加<br>";
-    echo "　・LOHACOカートへの必需品追加<br>";
-    echo "　・葬儀社への連絡<br>";
-    echo "　・お坊さんへの連絡<br>";
+		echo "";
 	}
 
 	/*
