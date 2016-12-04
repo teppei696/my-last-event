@@ -1,7 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
 <?php
 	require("vendor/autoload.php");
@@ -49,7 +80,13 @@
 		echo "・URLが間違っている可能性があります。サンプルコードの".'$url'."とmyThings Developersに表示されているAPIエントリーポイントが一致している事を確認してください<br>";
 		echo "・アクセストークンが正しく取得出来ていない可能性があります。アクセストークンの保存(callback.php)、および、取得を確認してください。<br>";
 	} else {
-		echo "カスタムトリガーの実行リクエストを受け付けました。";
+		echo "以下の作業を行いました。<br>";
+    echo "　・鈴木鉄兵様のTwitterへの投稿<br>";
+    echo "　・鈴木鉄兵様のFacebookへの投稿<br>";
+    echo "　・鈴木家用タスクリスト（Todoist）へのタスク追加<br>";
+    echo "　・LOHACOカートへの必需品追加<br>";
+    echo "　・葬儀社への連絡<br>";
+    echo "　・お坊さんへの連絡<br>";
 	}
 
 	/*
@@ -158,5 +195,28 @@
 		return $token;
 	}
 ?>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading">処理が完了しました。</div>
+            <div class="intro-lead-in">以下の処理を実施しております。</div>
+            <div class="intro-lead-in">　・鈴木鉄兵様のFacebookへの投稿</div>
+            <div class="intro-lead-in">　・鈴木鉄兵様のTwitterへの投稿</div>
+            <div class="intro-lead-in">　・LOHACAへの必需品の追加</div>
+            <div class="intro-lead-in">　・鈴木家（Todoist）へのタスク追加</div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</header>
+<h1>「鈴木 鉄兵」様が亡くなったことによる世界への影響</h1>
+<h3>箕面市の人口 129,895人 → 129,894人</h3>
+<h3>大阪府の人口 8,836,000人 → 8,835,999人</h3>
 </body>
 </html>
