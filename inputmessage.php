@@ -97,17 +97,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="告別式の日程" id="kokubetsu">
+                                    <input type="text" class="form-control" placeholder="告別式の日程" name="kokubetsu" id="kokubetsu">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="お葬式の日程" id="sousiki">
+                                    <input type="email" class="form-control" placeholder="お葬式の日程" name="sousiki" id="sousiki">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="故人友人へのメッセージ" id="msg" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="故人友人へのメッセージ" name="msg" id="msg" required data-validation-required-message="Please enter a message."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
